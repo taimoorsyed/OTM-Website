@@ -18,4 +18,15 @@
   <url><loc>https://overtimemarketing.ca/why-your-marketing-isnt-working</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://overtimemarketing.ca/what-is-a-marketing-campaign</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://overtimemarketing.ca/marketing-agency-for-small-business</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- About -->
+  <url><loc>https://overtimemarketing.ca/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://overtimemarketing.ca/blog-why-marketing-isnt-working</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://overtimemarketing.ca/blog-what-is-a-campaign</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://overtimemarketing.ca/blog-how-to-launch-product-canada</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://overtimemarketing.ca/blog-marketing-agency-vancouver-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://overtimemarketing.ca/blog-marketing-budget-small-business</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://overtimemarketing.ca/blog-campaign-vs-tactics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
