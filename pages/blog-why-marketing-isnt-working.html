@@ -28,7 +28,7 @@ body{background:var(--black);color:var(--off-white);font-family:var(--font-body)
 .cursor-ring{width:32px;height:32px;border:1px solid rgba(25,227,45,0.35);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.13s ease}
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 52px;transition:background 0.35s,border-color 0.35s;border-bottom:1px solid transparent}
 nav.scrolled{background:rgba(10,10,10,0.94);border-color:var(--border);backdrop-filter:blur(14px)}
-.nav-logo img{height:34px;filter:brightness(10);display:block}
+.nav-logo img{height:34px;display:block}
 .nav-links{display:flex;gap:36px;list-style:none;align-items:center}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;transition:color 0.2s}
 .nav-links a:hover{color:var(--off-white)}
@@ -64,7 +64,7 @@ nav.scrolled{background:rgba(10,10,10,0.94);border-color:var(--border);backdrop-
 .related-title{font-size:16px;font-weight:500;color:var(--off-white);line-height:1.4;flex:1}
 .related-arrow{font-size:18px;color:var(--muted)}
 footer{padding:56px 52px;border-top:1px solid var(--border);display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
-.footer-logo-img{height:26px;filter:brightness(10);margin-bottom:14px;display:block}
+.footer-logo-img{height:26px;margin-bottom:14px;display:block}
 .footer-tagline{font-size:13px;color:rgba(240,239,237,0.3);line-height:1.65}
 .footer-col-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(240,239,237,0.25);margin-bottom:18px}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
@@ -87,7 +87,7 @@ footer{padding:56px 52px;border-top:1px solid var(--border);display:grid;grid-te
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <nav id="mainNav">
-  <a href="/" class="nav-logo"><img src="https://overtimemarketing.ca/wp-content/uploads/2025/11/1-e1763326700996.png" alt="Overtime Marketing"/></a>
+  <a href="/" class="nav-logo"><img src="/logo.svg" alt="Overtime Marketing"/></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
     <li><a href="/#campaign-types">Campaigns</a></li>
@@ -156,7 +156,7 @@ footer{padding:56px 52px;border-top:1px solid var(--border);display:grid;grid-te
 </div>
 <footer>
   <div>
-    <img src="https://overtimemarketing.ca/wp-content/uploads/2025/11/1-e1763326700996.png" alt="Overtime Marketing" class="footer-logo-img"/>
+    <img src="/logo.svg" alt="Overtime Marketing" class="footer-logo-img"/>
     <div class="footer-tagline">Full campaign marketing partner for ambitious businesses across Canada. Based in Vancouver, BC.</div>
   </div>
   <div>
