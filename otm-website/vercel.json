@@ -1,0 +1,32 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about-us", "destination": "/", "permanent": true },
+    { "source": "/services", "destination": "/#campaign-types", "permanent": true },
+    { "source": "/content-campaigns", "destination": "/launch-campaign-agency", "permanent": true },
+    { "source": "/our-work", "destination": "/#work", "permanent": true },
+    { "source": "/reviews", "destination": "/#reviews", "permanent": true },
+    { "source": "/faqs", "destination": "/#faq", "permanent": true },
+    { "source": "/faq", "destination": "/#faq", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/marketing-agency-vancouver", "destination": "/pages/marketing-agency-vancouver.html" },
+    { "source": "/marketing-agency-surrey", "destination": "/pages/marketing-agency-surrey.html" },
+    { "source": "/marketing-agency-kelowna", "destination": "/pages/marketing-agency-kelowna.html" },
+    { "source": "/marketing-agency-abbotsford", "destination": "/pages/marketing-agency-abbotsford.html" },
+    { "source": "/marketing-agency-victoria", "destination": "/pages/marketing-agency-victoria.html" },
+    { "source": "/marketing-agency-burnaby", "destination": "/pages/marketing-agency-burnaby.html" },
+    { "source": "/marketing-agency-toronto", "destination": "/pages/marketing-agency-toronto.html" },
+    { "source": "/marketing-agency-calgary", "destination": "/pages/marketing-agency-calgary.html" },
+    { "source": "/marketing-agency-canada", "destination": "/pages/marketing-agency-canada.html" },
+    { "source": "/launch-campaign-agency", "destination": "/pages/launch-campaign-agency.html" },
+    { "source": "/brand-awareness-campaign-agency", "destination": "/pages/brand-awareness-campaign-agency.html" },
+    { "source": "/growth-campaign-agency", "destination": "/pages/growth-campaign-agency.html" },
+    { "source": "/event-campaign-agency", "destination": "/pages/event-campaign-agency.html" },
+    { "source": "/rebrand-campaign-agency", "destination": "/pages/rebrand-campaign-agency.html" },
+    { "source": "/why-your-marketing-isnt-working", "destination": "/pages/why-your-marketing-isnt-working.html" },
+    { "source": "/what-is-a-marketing-campaign", "destination": "/pages/what-is-a-marketing-campaign.html" },
+    { "source": "/marketing-agency-for-small-business", "destination": "/pages/marketing-agency-for-small-business.html" }
+  ]
+}
