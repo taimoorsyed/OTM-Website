@@ -2,9 +2,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/about-us", "destination": "/", "permanent": true },
+    { "source": "/about-us", "destination": "/pages/about.html", "permanent": true },
+    { "source": "/about", "destination": "/pages/about.html", "permanent": true },
     { "source": "/services", "destination": "/#campaign-types", "permanent": true },
-    { "source": "/content-campaigns", "destination": "/launch-campaign-agency", "permanent": true },
+    { "source": "/content-campaigns", "destination": "/pages/launch-campaign-agency.html", "permanent": true },
     { "source": "/our-work", "destination": "/#work", "permanent": true },
     { "source": "/reviews", "destination": "/#reviews", "permanent": true },
     { "source": "/faqs", "destination": "/#faq", "permanent": true },
@@ -27,6 +28,13 @@
     { "source": "/rebrand-campaign-agency", "destination": "/pages/rebrand-campaign-agency.html" },
     { "source": "/why-your-marketing-isnt-working", "destination": "/pages/why-your-marketing-isnt-working.html" },
     { "source": "/what-is-a-marketing-campaign", "destination": "/pages/what-is-a-marketing-campaign.html" },
-    { "source": "/marketing-agency-for-small-business", "destination": "/pages/marketing-agency-for-small-business.html" }
+    { "source": "/marketing-agency-for-small-business", "destination": "/pages/marketing-agency-for-small-business.html" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/blog-why-marketing-isnt-working", "destination": "/pages/blog-why-marketing-isnt-working.html" },
+    { "source": "/blog-what-is-a-campaign", "destination": "/pages/blog-what-is-a-campaign.html" },
+    { "source": "/blog-how-to-launch-product-canada", "destination": "/pages/blog-how-to-launch-product-canada.html" },
+    { "source": "/blog-marketing-agency-vancouver-guide", "destination": "/pages/blog-marketing-agency-vancouver-guide.html" },
+    { "source": "/blog-marketing-budget-small-business", "destination": "/pages/blog-marketing-budget-small-business.html" },
+    { "source": "/blog-campaign-vs-tactics", "destination": "/pages/blog-campaign-vs-tactics.html" }
   ]
 }
