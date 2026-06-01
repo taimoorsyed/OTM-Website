@@ -62,6 +62,35 @@
     .cursor{width:8px;height:8px;background:var(--green);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
     .cursor-ring{width:32px;height:32px;border:1px solid rgba(25,227,45,0.35);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.13s ease}
 
+
+    /* ── Letter animation ── */
+    .hero-headline .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px) rotate(2deg);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .hero-headline .letter.visible {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
+    }
+    .hero-headline .space { display: inline-block; width: 0.28em; }
+    .word-wrap { display: inline; }
+
+    /* ── Counter animation ── */
+    .strip-num {
+      font-family: var(--font-display);
+      font-size: 64px;
+      line-height: 1;
+      color: var(--off-white);
+      margin-bottom: 6px;
+      transition: color 0.3s;
+    }
+    .stats-strip-item.counted .strip-num { color: var(--green); animation: flashGreen 0.6s ease forwards; }
+    @keyframes flashGreen {
+      0%   { color: var(--green); }
+      100% { color: var(--off-white); }
+    }
     /* Grain */
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000}
 
@@ -326,8 +355,11 @@
 <section class="hero" id="home">
   <div class="hero-bg"></div>
       <p class="hero-eyebrow">Full Campaign Marketing Partner</p>
-    <h1 class="hero-headline">
-      Your Marketing<br/>Isn't Working<br/>Because It's Not<br/><span class="dim">A Campaign.</span>
+    <h1 class="hero-headline" id="heroHead">
+      <span class="word-wrap">Your Marketing</span><br/>
+      <span class="word-wrap">Isn&#39;t Working</span><br/>
+      <span class="word-wrap">Because It&#39;s Not</span><br/>
+      <span class="dim word-wrap"><span class="word-wrap">A Campaign.</span></span>
     </h1>
     <p class="hero-sub">Disconnected tactics look like activity but produce no momentum. We build campaigns around a single objective so every dollar you spend builds on the last one, and your marketing finally compounds into results.</p>
     <div class="hero-actions">
@@ -361,9 +393,9 @@
 
 <!-- STATS STRIP -->
 <div class="stats-strip" style="grid-template-columns:repeat(3,1fr)">
-  <div class="stats-strip-item reveal"><div class="strip-num">90+</div><div class="strip-label">Brands Served</div></div>
-  <div class="stats-strip-item reveal"><div class="strip-num">30+</div><div class="strip-label">Five-Star Reviews</div></div>
-  <div class="stats-strip-item reveal"><div class="strip-num">20+</div><div class="strip-label">Years Combined Experience</div></div>
+  <div class="stats-strip-item reveal"><div class="strip-num" data-target="90" data-suffix="+">0+</div><div class="strip-label">Brands Served</div></div>
+  <div class="stats-strip-item reveal"><div class="strip-num" data-target="30" data-suffix="+">0+</div><div class="strip-label">Five-Star Reviews</div></div>
+  <div class="stats-strip-item reveal"><div class="strip-num" data-target="20" data-suffix="+">0+</div><div class="strip-label">Years Combined Experience</div></div>
 </div>
 
 <!-- WORK GRID -->
@@ -375,101 +407,81 @@
 
   <!-- ROW 1: Large + Medium -->
   <div style="display:grid;grid-template-columns:2fr 1fr;gap:2px">
-    <div class="work-item reveal" style="aspect-ratio:unset;height:520px">
-      <img src="/images/case-startup-canada-stage.jpg" alt="Startup Canada Young Entrepreneurs of the Year Awards campaign by Overtime Marketing" style="object-fit:cover;object-position:center top"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+<div class="work-item reveal" style="height:500px;background:var(--mid2)">
+      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
+      </div>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Event Campaign</div>
-        <div class="work-name" style="font-size:clamp(28px,3vw,52px)">Startup Canada</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px;line-height:1.5">Young Entrepreneurs of the Year Awards &mdash; Manitoba 2025<br/>In partnership with TD Bank, Osler &amp; Futurpreneur</div>
+        <div class="work-name" style="font-size:clamp(28px,3vw,48px)">Startup Canada</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Young Entrepreneur of the Year Awards in Manitoba &mdash; in partnership with TD Bank, Osler &amp; Futurpreneur.</div>
       </div>
     </div>
-    <div class="work-item reveal" style="aspect-ratio:unset;height:520px">
-      <img src="/images/case-loi-event.jpg" alt="League of Innovators YEY event campaign by Overtime Marketing" style="object-fit:cover;object-position:center center"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+<div class="work-item reveal" style="height:500px;background:var(--mid2)">
+      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
+      </div>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Event Campaign</div>
-        <div class="work-name" style="font-size:clamp(24px,2.5vw,42px)">League of Innovators</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px">YEY Awards ceremony coverage &amp; campaign amplification</div>
+        <div class="work-name" style="font-size:clamp(24px,2.5vw,40px)">League of Innovators</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Fireside chat with Hootsuite founder Ryan Holmes, turned into a full awareness campaign.</div>
       </div>
     </div>
   </div>
 
   <!-- ROW 2: Medium + Large -->
   <div style="display:grid;grid-template-columns:1fr 2fr;gap:2px;margin-top:2px">
-    <div class="work-item reveal" style="aspect-ratio:unset;height:440px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/Flavour-Shaker.png" alt="Flavour Shaker Foods product launch campaign" style="object-fit:contain;background:#0a0a0a"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+<div class="work-item reveal" style="height:440px;background:var(--mid2)">
+      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
+      </div>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Launch Campaign</div>
-        <div class="work-name" style="font-size:clamp(20px,2vw,34px)">Flavour Shaker Foods</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px">Brand video, product photography &amp; Amazon A+ content</div>
+        <div class="work-name" style="font-size:clamp(22px,2vw,36px)">Flavour Shaker Foods</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Full brand launch for a Victoria-based spice startup entering a competitive market.</div>
       </div>
     </div>
-    <div class="work-item reveal" style="aspect-ratio:unset;height:440px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/Homestead-Cider.png" alt="Homestead Cider growth campaign by Overtime Marketing" style="object-fit:contain;background:#0a0a0a"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+<div class="work-item reveal" style="height:440px;background:var(--mid2)">
+      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
+      </div>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Growth Campaign</div>
         <div class="work-name" style="font-size:clamp(24px,2.5vw,44px)">Homestead Cider</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px">A brand presence that finally matched the quality of their product</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">A brand presence that finally matched the quality of their product.</div>
       </div>
     </div>
   </div>
 
   <!-- ROW 3: Three equal -->
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px">
-    <div class="work-item reveal" style="height:360px">
-      <img src="/images/case-dr-bee.jpg" alt="Dr. Bee Superfood Honey product launch campaign by Overtime Marketing" style="object-fit:cover;object-position:center center"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Launch Campaign</div>
-        <div class="work-name" style="font-size:28px">Dr. Bee Honey</div>
-        <div style="font-size:12px;color:rgba(240,239,237,0.5);margin-top:6px">Product photography &amp; brand launch</div>
+<div class="work-item reveal" style="height:360px;background:var(--mid2)">
+      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
       </div>
-    </div>
-    <div class="work-item reveal" style="height:360px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/myCF-web-square.png" alt="Community Futures brand awareness campaign" style="object-fit:contain;background:#0a0a0a"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Brand Awareness</div>
+        <div class="work-tag">Brand Awareness Campaign</div>
         <div class="work-name" style="font-size:28px">Community Futures</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">A campaign built around real business owners in Mission, BC.</div>
       </div>
     </div>
-    <div class="work-item reveal" style="height:360px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/Screenshot-2026-03-21-at-1.15.38-PM.png" alt="BC Food and Beverage growth campaign" style="object-fit:contain;background:#0a0a0a"/>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+<div class="work-item reveal" style="height:360px;background:var(--mid2)">
+      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
+        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
+      </div>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Growth Campaign</div>
         <div class="work-name" style="font-size:28px">BC Food &amp; Beverage</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Subject matter experts for the BC F&amp;B Growth Hub Accelerator, delivering marketing education province-wide.</div>
       </div>
     </div>
-  </div>
-
-  <!-- ROW 4: Three equal — remaining placeholders -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px">
-    <div class="work-item reveal" style="height:360px">
-      <img src="/images/case-bodega-ridge.jpg" alt="Bodega Ridge campaign by Overtime Marketing"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.12)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/><path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(240,239,237,0.4)">Bodega Ridge</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 24px">Upload: /images/case-bodega-ridge.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:0"></div>
-      <div class="work-info" style="opacity:0"><div class="work-tag">Brand Campaign</div><div class="work-name" style="font-size:28px">Bodega Ridge</div></div>
-    </div>
-    <div class="work-item reveal" style="height:360px">
-      <img src="/images/case-hubco.jpg" alt="HubCo Brewing campaign by Overtime Marketing"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.12)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/><path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(240,239,237,0.4)">HubCo Brewing</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 24px">Upload: /images/case-hubco.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:0"></div>
-      <div class="work-info" style="opacity:0"><div class="work-tag">Growth Campaign</div><div class="work-name" style="font-size:28px">HubCo Brewing</div></div>
-    </div>
+    <!-- Slot 7: placeholder -->
     <div class="work-item reveal" style="height:360px;background:var(--mid2)">
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:1">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="rgba(25,227,45,0.3)"/><path d="M20 12v16M12 20h16" stroke="#19e32d" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -908,6 +920,89 @@
       stickyCta.classList.remove('visible');
     }
   }, {passive: true});
+
+
+  // ── Letter-by-letter headline ──────────────────────────────────────────────
+  (function() {
+    const head = document.getElementById('heroHead');
+    if (!head) return;
+
+    // Walk through and wrap every letter in a span
+    function wrapLetters(node) {
+      if (node.nodeType === 3) { // text node
+        const text = node.textContent;
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < text.length; i++) {
+          if (text[i] === ' ') {
+            const sp = document.createElement('span');
+            sp.className = 'space';
+            frag.appendChild(sp);
+          } else {
+            const span = document.createElement('span');
+            span.className = 'letter';
+            span.textContent = text[i];
+            frag.appendChild(span);
+          }
+        }
+        node.parentNode.replaceChild(frag, node);
+      } else if (node.nodeType === 1 && node.tagName !== 'BR') {
+        Array.from(node.childNodes).forEach(wrapLetters);
+      }
+    }
+    wrapLetters(head);
+
+    // Stagger each letter in
+    const letters = head.querySelectorAll('.letter');
+    letters.forEach((letter, i) => {
+      setTimeout(() => {
+        letter.classList.add('visible');
+      }, 300 + (i * 28));
+    });
+  })();
+
+  // ── Stats counter ───────────────────────────────────────────────────────────
+  (function() {
+    const counters = document.querySelectorAll('.strip-num[data-target]');
+    if (!counters.length) return;
+
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400;
+      const start = performance.now();
+
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.round(easeOut(progress) * target);
+        el.textContent = value + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+          el.closest('.stats-strip-item').classList.add('counted');
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    // Fire when stats strip enters viewport
+    const strip = document.querySelector('.stats-strip');
+    if (!strip) return;
+
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          counters.forEach(c => animateCounter(c));
+          counterObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    counterObs.observe(strip);
+  })();
 
   // FAQ
   document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement,isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')})});
