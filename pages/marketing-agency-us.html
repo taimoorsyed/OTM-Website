@@ -112,6 +112,10 @@ footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:960px){
+      .footer-top{grid-template-columns:1fr}
+      .footer-logo-img{height:64px}
+      .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+      .footer-bottom-links{justify-content:center;gap:16px}
   nav{padding:14px 24px}.nav-logo img{height:64px}.nav-links{display:none}
   .hero-lp{grid-template-columns:1fr;padding:160px 24px 64px}
   .hero-right-stats{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:32px;flex-direction:row;flex-wrap:wrap;gap:24px}
@@ -282,6 +286,11 @@ waste marketing budget.</h2>
     <div>
       <img src="/logo.svg" alt="Overtime Marketing" class="footer-logo-img"/>
       <div class="footer-tagline">Full campaign marketing partner for ambitious businesses across North America. Based in Vancouver, BC.</div>
+      <div style="margin-top:20px">
+        <a href="https://bcfb.ca" target="_blank" rel="noopener" title="BC Food &amp; Beverage Proud Member">
+          <img src="/images/bcfb-logo.png" alt="BC Food and Beverage Proud Member" style="height:44px;width:auto;opacity:0.65;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'"/>
+        </a>
+      </div>
     </div>
     <div>
       <div class="footer-col-label">Campaigns</div>
@@ -294,14 +303,15 @@ waste marketing budget.</h2>
       </ul>
     </div>
     <div>
-      <div class="footer-col-label">Locations</div>
+      <div class="footer-col-label">Company</div>
       <ul class="footer-links">
-        <li><a href="/pages/marketing-agency-vancouver.html">Vancouver</a></li>
-        <li><a href="/pages/marketing-agency-toronto.html">Toronto</a></li>
-        <li><a href="/pages/marketing-agency-calgary.html">Calgary</a></li>
-        <li><a href="/pages/marketing-agency-ottawa.html">Ottawa</a></li>
-        <li><a href="/pages/marketing-agency-edmonton.html">Edmonton</a></li>
-        <li><a href="/pages/marketing-agency-us.html">United States</a></li>
+        <li><a href="/pages/about.html">About OTM</a></li>
+        <li><a href="/#work">Our Work</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#locations">Locations</a></li>
+        <li><a href="https://www.instagram.com/overtime.marketing/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/90551355/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:info@overtimemarketing.ca">info@overtimemarketing.ca</a></li>
       </ul>
     </div>
     <div>
@@ -317,10 +327,16 @@ waste marketing budget.</h2>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 Overtime Marketing Inc. All Rights Reserved. Vancouver, BC.</span>
-    <span>info@overtimemarketing.ca</span>
+    <span>&copy; 2026 Overtime Marketing Inc. All Rights Reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="/pages/marketing-agency-vancouver.html">Vancouver</a>
+      <a href="/pages/marketing-agency-toronto.html">Toronto</a>
+      <a href="/pages/marketing-agency-calgary.html">Calgary</a>
+      <a href="/pages/marketing-agency-us.html">United States</a>
+    </div>
   </div>
 </footer>
+<div style="padding:0"></div>
 <script>
 const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;

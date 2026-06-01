@@ -264,6 +264,7 @@
     @media(max-width:960px){.sticky-cta{padding:14px 24px;flex-direction:column;gap:10px;text-align:center}}
     /* MOBILE */
     @media(max-width:960px){
+      .steps-4col{grid-template-columns:1fr}
       [style*="grid-template-columns:2fr 1fr"],[style*="grid-template-columns:1fr 2fr"],[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}
       .work-item{height:300px!important}
       nav{padding:14px 24px}
@@ -374,207 +375,108 @@
 
   <!-- ROW 1: Large + Medium -->
   <div style="display:grid;grid-template-columns:2fr 1fr;gap:2px">
-
-    <!-- CASE 1: Startup Canada — REPLACE src with your image -->
-    <!-- IMAGE: https://overtimemarketing.ca/wp-content/uploads/2026/03/JMB_3720-scaled.jpeg -->
-    <div class="work-item reveal" style="aspect-ratio:unset;height:500px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/JMB_3720-scaled.jpeg"
-           alt="Startup Canada event campaign by Overtime Marketing"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:none;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Startup Canada</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.25)">Upload: /images/case-startup-canada.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
+    <div class="work-item reveal" style="aspect-ratio:unset;height:520px">
+      <img src="/images/case-startup-canada-stage.jpg" alt="Startup Canada Young Entrepreneurs of the Year Awards campaign by Overtime Marketing" style="object-fit:cover;object-position:center top"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Event Campaign</div>
-        <div class="work-name" style="font-size:clamp(28px,3vw,48px)">Startup Canada</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Young Entrepreneur Awards &mdash; Manitoba 2025<br/>In partnership with TD Bank, Osler &amp; Futurpreneur</div>
+        <div class="work-name" style="font-size:clamp(28px,3vw,52px)">Startup Canada</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px;line-height:1.5">Young Entrepreneurs of the Year Awards &mdash; Manitoba 2025<br/>In partnership with TD Bank, Osler &amp; Futurpreneur</div>
       </div>
     </div>
-
-    <!-- CASE 2: League of Innovators — REPLACE src with your image -->
-    <!-- IMAGE: https://overtimemarketing.ca/wp-content/uploads/2026/02/League-of-Innovators.png -->
-    <div class="work-item reveal" style="aspect-ratio:unset;height:500px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/League-of-Innovators.png"
-           alt="League of Innovators campaign by Overtime Marketing"
-           style="object-fit:contain;background:#0f0f0f"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:none;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">League of Innovators</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.25)">Upload: /images/case-loi.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
+    <div class="work-item reveal" style="aspect-ratio:unset;height:520px">
+      <img src="/images/case-loi-event.jpg" alt="League of Innovators YEY event campaign by Overtime Marketing" style="object-fit:cover;object-position:center center"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Event Campaign</div>
-        <div class="work-name" style="font-size:clamp(24px,2.5vw,40px)">League of Innovators</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px">Fireside chat with Hootsuite founder Ryan Holmes</div>
+        <div class="work-name" style="font-size:clamp(24px,2.5vw,42px)">League of Innovators</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px">YEY Awards ceremony coverage &amp; campaign amplification</div>
       </div>
     </div>
-
   </div>
 
   <!-- ROW 2: Medium + Large -->
   <div style="display:grid;grid-template-columns:1fr 2fr;gap:2px;margin-top:2px">
-
-    <!-- CASE 3: Flavour Shaker — REPLACE src with your image -->
-    <!-- IMAGE: https://overtimemarketing.ca/wp-content/uploads/2026/02/Flavour-Shaker.png -->
     <div class="work-item reveal" style="aspect-ratio:unset;height:440px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/Flavour-Shaker.png"
-           alt="Flavour Shaker Foods launch campaign"
-           style="object-fit:contain;background:#0a0a0a"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:none;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Flavour Shaker Foods</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.25)">Upload: /images/case-flavour-shaker.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
+      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/Flavour-Shaker.png" alt="Flavour Shaker Foods product launch campaign" style="object-fit:contain;background:#0a0a0a"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Launch Campaign</div>
-        <div class="work-name" style="font-size:clamp(22px,2vw,36px)">Flavour Shaker Foods</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px">Brand video, product photography &amp; Amazon A+ content</div>
+        <div class="work-name" style="font-size:clamp(20px,2vw,34px)">Flavour Shaker Foods</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px">Brand video, product photography &amp; Amazon A+ content</div>
       </div>
     </div>
-
-    <!-- CASE 4: Homestead Cider — REPLACE src with your image -->
-    <!-- IMAGE: https://overtimemarketing.ca/wp-content/uploads/2026/02/Homestead-Cider.png -->
     <div class="work-item reveal" style="aspect-ratio:unset;height:440px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/Homestead-Cider.png"
-           alt="Homestead Cider growth campaign"
-           style="object-fit:contain;background:#0a0a0a"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:none;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Homestead Cider</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.25)">Upload: /images/case-homestead-cider.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
+      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/02/Homestead-Cider.png" alt="Homestead Cider growth campaign by Overtime Marketing" style="object-fit:contain;background:#0a0a0a"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Growth Campaign</div>
         <div class="work-name" style="font-size:clamp(24px,2.5vw,44px)">Homestead Cider</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px">A brand presence that finally matched the quality of their product</div>
+        <div style="font-size:13px;color:rgba(240,239,237,0.55);margin-top:8px">A brand presence that finally matched the quality of their product</div>
       </div>
     </div>
-
   </div>
 
   <!-- ROW 3: Three equal -->
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px">
-
-    <!-- CASE 5: Community Futures — REPLACE src with your image -->
-    <!-- IMAGE: https://overtimemarketing.ca/wp-content/uploads/2026/03/myCF-web-square.png -->
     <div class="work-item reveal" style="height:360px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/myCF-web-square.png"
-           alt="Community Futures brand awareness campaign"
-           style="object-fit:contain;background:#0a0a0a"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:none;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Community Futures</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.25)">Upload: /images/case-community-futures.jpg</div>
+      <img src="/images/case-dr-bee.jpg" alt="Dr. Bee Superfood Honey product launch campaign by Overtime Marketing" style="object-fit:cover;object-position:center center"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
+      <div class="work-info" style="opacity:1;transform:none">
+        <div class="work-tag">Launch Campaign</div>
+        <div class="work-name" style="font-size:28px">Dr. Bee Honey</div>
+        <div style="font-size:12px;color:rgba(240,239,237,0.5);margin-top:6px">Product photography &amp; brand launch</div>
       </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
+    </div>
+    <div class="work-item reveal" style="height:360px">
+      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/myCF-web-square.png" alt="Community Futures brand awareness campaign" style="object-fit:contain;background:#0a0a0a"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Brand Awareness</div>
         <div class="work-name" style="font-size:28px">Community Futures</div>
       </div>
     </div>
-
-    <!-- CASE 6: BC Food & Beverage — REPLACE src with your image -->
-    <!-- IMAGE: https://overtimemarketing.ca/wp-content/uploads/2026/03/Screenshot-2026-03-21-at-1.15.38-PM.png -->
     <div class="work-item reveal" style="height:360px">
-      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/Screenshot-2026-03-21-at-1.15.38-PM.png"
-           alt="BC Food and Beverage growth campaign"
-           style="object-fit:contain;background:#0a0a0a"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:none;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">BC Food &amp; Beverage</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.25)">Upload: /images/case-bcfb.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
+      <img src="https://overtimemarketing.ca/wp-content/uploads/2026/03/Screenshot-2026-03-21-at-1.15.38-PM.png" alt="BC Food and Beverage growth campaign" style="object-fit:contain;background:#0a0a0a"/>
+      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.88) 0%,transparent 55%)"></div>
       <div class="work-info" style="opacity:1;transform:none">
         <div class="work-tag">Growth Campaign</div>
         <div class="work-name" style="font-size:28px">BC Food &amp; Beverage</div>
       </div>
     </div>
-
-    <!-- CASE 7: Bodega Ridge — ADD YOUR IMAGE -->
-    <!-- Upload a campaign image to: /images/case-bodega-ridge.jpg -->
-    <div class="work-item reveal" style="height:360px">
-      <img src="/images/case-bodega-ridge.jpg"
-           alt="Bodega Ridge campaign by Overtime Marketing"
-           onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/>
-          <path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(240,239,237,0.4)">Bodega Ridge</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 20px">Upload image to<br/>/images/case-bodega-ridge.jpg</div>
-      </div>
-      <div class="work-overlay" style="opacity:0;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:0;transform:none">
-        <div class="work-tag">Brand Campaign</div>
-        <div class="work-name" style="font-size:28px">Bodega Ridge</div>
-      </div>
-    </div>
-
   </div>
 
-  <!-- ROW 4: Three equal — more placeholders ready for new work -->
+  <!-- ROW 4: Three equal — remaining placeholders -->
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px">
-
-    <!-- CASE 8: HubCo Brewing — ADD YOUR IMAGE -->
-    <!-- Upload a campaign image to: /images/case-hubco.jpg -->
     <div class="work-item reveal" style="height:360px">
-      <img src="/images/case-hubco.jpg"
-           alt="HubCo Brewing campaign by Overtime Marketing"
+      <img src="/images/case-bodega-ridge.jpg" alt="Bodega Ridge campaign by Overtime Marketing"
            onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/>
-          <path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(240,239,237,0.4)">HubCo Brewing</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 20px">Upload image to<br/>/images/case-hubco.jpg</div>
+      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.12)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/><path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(240,239,237,0.4)">Bodega Ridge</div>
+        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 24px">Upload: /images/case-bodega-ridge.jpg</div>
       </div>
       <div class="work-overlay" style="opacity:0"></div>
-      <div class="work-info" style="opacity:0">
-        <div class="work-tag">Growth Campaign</div>
-        <div class="work-name" style="font-size:28px">HubCo Brewing</div>
-      </div>
+      <div class="work-info" style="opacity:0"><div class="work-tag">Brand Campaign</div><div class="work-name" style="font-size:28px">Bodega Ridge</div></div>
     </div>
-
-    <!-- CASE 9: Bedford Dental — ADD YOUR IMAGE -->
     <div class="work-item reveal" style="height:360px">
-      <img src="/images/case-bedford-dental.jpg"
-           alt="Bedford Dental campaign by Overtime Marketing"
+      <img src="/images/case-hubco.jpg" alt="HubCo Brewing campaign by Overtime Marketing"
            onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex'"/>
-      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.15)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/>
-          <path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(240,239,237,0.4)">Bedford Dental</div>
-        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 20px">Upload image to<br/>/images/case-bedford-dental.jpg</div>
+      <div class="img-placeholder" style="display:flex;position:absolute;inset:0;background:var(--mid2);flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.12)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="rgba(240,239,237,0.2)"/><path d="M16 10v12M10 16h12" stroke="rgba(240,239,237,0.4)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(240,239,237,0.4)">HubCo Brewing</div>
+        <div style="font-size:10px;color:rgba(240,239,237,0.2);text-align:center;padding:0 24px">Upload: /images/case-hubco.jpg</div>
       </div>
       <div class="work-overlay" style="opacity:0"></div>
-      <div class="work-info" style="opacity:0">
-        <div class="work-tag">Brand Awareness Campaign</div>
-        <div class="work-name" style="font-size:28px">Bedford Dental</div>
-      </div>
+      <div class="work-info" style="opacity:0"><div class="work-tag">Growth Campaign</div><div class="work-name" style="font-size:28px">HubCo Brewing</div></div>
     </div>
-
-    <!-- CASE 10: Your Next Client -->
     <div class="work-item reveal" style="height:360px;background:var(--mid2)">
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="rgba(25,227,45,0.3)"/>
-          <path d="M20 12v16M12 20h16" stroke="#19e32d" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="rgba(25,227,45,0.3)"/><path d="M20 12v16M12 20h16" stroke="#19e32d" stroke-width="1.5" stroke-linecap="round"/></svg>
         <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Your brand here</div>
-        <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" style="font-size:11px;color:var(--green);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;border:1px solid rgba(25,227,45,0.3);padding:8px 16px;border-radius:2px;transition:background 0.2s" onmouseover="this.style.background='rgba(25,227,45,0.08)'" onmouseout="this.style.background='transparent'">Start a campaign &rarr;</a>
+        <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" style="font-size:11px;color:var(--green);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;border:1px solid rgba(25,227,45,0.3);padding:8px 16px;border-radius:2px" onmouseover="this.style.background='rgba(25,227,45,0.08)'" onmouseout="this.style.background='transparent'">Start a campaign &rarr;</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -854,7 +756,7 @@
 <section style="background:var(--black);padding:112px 52px">
   <p class="s-label reveal">What Happens Next</p>
   <h2 class="s-head reveal">No long sales process.<br/><span class="dim">Just three steps.</span></h2>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px">
+  <div class="steps-4col" style="margin-top:56px">
     <div class="p-step reveal" style="border-color:rgba(25,227,45,0.15)">
       <div class="p-num">1</div>
       <div class="p-step-label">Step One</div>
