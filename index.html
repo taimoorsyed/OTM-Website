@@ -63,19 +63,17 @@
     .cursor-ring{width:32px;height:32px;border:1px solid rgba(25,227,45,0.35);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.13s ease}
 
 
-    /* ── Letter animation ── */
-    .hero-headline .letter {
+    /* ── Line-reveal headline animation ── */
+    .line-reveal {
       display: inline-block;
       opacity: 0;
-      transform: translateY(18px) rotate(2deg);
-      transition: opacity 0.4s ease, transform 0.4s ease;
+      transform: translateY(40px);
+      animation: lineReveal 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
     }
-    .hero-headline .letter.visible {
-      opacity: 1;
-      transform: translateY(0) rotate(0deg);
+    @keyframes lineReveal {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
-    .hero-headline .space { display: inline-block; width: 0.28em; }
-    .word-wrap { display: inline; }
 
     /* ── Counter animation ── */
     .strip-num {
@@ -356,10 +354,10 @@
   <div class="hero-bg"></div>
       <p class="hero-eyebrow">Full Campaign Marketing Partner</p>
     <h1 class="hero-headline" id="heroHead">
-      <span class="word-wrap">Your Marketing</span><br/>
-      <span class="word-wrap">Isn&#39;t Working</span><br/>
-      <span class="word-wrap">Because It&#39;s Not</span><br/>
-      <span class="dim word-wrap"><span class="word-wrap">A Campaign.</span></span>
+      <span class="line-reveal" style="animation-delay:0.3s">Your Marketing</span><br/>
+      <span class="line-reveal" style="animation-delay:0.48s">Isn&#39;t Working</span><br/>
+      <span class="line-reveal" style="animation-delay:0.66s">Because It&#39;s Not</span><br/>
+      <span class="dim line-reveal" style="animation-delay:0.84s">A Campaign.</span>
     </h1>
     <p class="hero-sub">Disconnected tactics look like activity but produce no momentum. We build campaigns around a single objective so every dollar you spend builds on the last one, and your marketing finally compounds into results.</p>
     <div class="hero-actions">
@@ -921,44 +919,6 @@
     }
   }, {passive: true});
 
-
-  // ── Letter-by-letter headline ──────────────────────────────────────────────
-  (function() {
-    const head = document.getElementById('heroHead');
-    if (!head) return;
-
-    // Walk through and wrap every letter in a span
-    function wrapLetters(node) {
-      if (node.nodeType === 3) { // text node
-        const text = node.textContent;
-        const frag = document.createDocumentFragment();
-        for (let i = 0; i < text.length; i++) {
-          if (text[i] === ' ') {
-            const sp = document.createElement('span');
-            sp.className = 'space';
-            frag.appendChild(sp);
-          } else {
-            const span = document.createElement('span');
-            span.className = 'letter';
-            span.textContent = text[i];
-            frag.appendChild(span);
-          }
-        }
-        node.parentNode.replaceChild(frag, node);
-      } else if (node.nodeType === 1 && node.tagName !== 'BR') {
-        Array.from(node.childNodes).forEach(wrapLetters);
-      }
-    }
-    wrapLetters(head);
-
-    // Stagger each letter in
-    const letters = head.querySelectorAll('.letter');
-    letters.forEach((letter, i) => {
-      setTimeout(() => {
-        letter.classList.add('visible');
-      }, 300 + (i * 28));
-    });
-  })();
 
   // ── Stats counter ───────────────────────────────────────────────────────────
   (function() {
