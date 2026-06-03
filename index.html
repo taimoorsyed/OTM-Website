@@ -89,6 +89,26 @@
       0%   { color: var(--green); }
       100% { color: var(--off-white); }
     }
+
+    
+
+    .cases-tabs{display:flex;gap:2px;margin-top:40px;margin-bottom:2px;flex-wrap:wrap}
+    .cases-tab{background:var(--mid2);border:1px solid var(--border);padding:10px 20px;font-size:11px;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);cursor:none;transition:all 0.2s;font-family:var(--font-body);font-weight:400}
+    .cases-tab:hover{color:var(--off-white);border-color:var(--border-light)}
+    .cases-tab.active{background:rgba(25,227,45,0.07);border-color:rgba(25,227,45,0.35);color:var(--green)}
+    .cases-count{font-size:10px;opacity:0.55;margin-left:4px}
+    .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .case-card{background:var(--mid2);border:1px solid var(--border);overflow:hidden;transition:border-color 0.3s,opacity 0.25s,transform 0.25s}
+    .case-card:hover{border-color:rgba(25,227,45,0.18)}
+    .case-card.hidden{display:none}
+    .case-img-slot{width:100%;aspect-ratio:16/9;background:var(--black);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+    .case-img-slot span{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.15)}
+    .case-body{padding:24px}
+    .case-tag{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+    .case-name{font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;line-height:1;color:var(--off-white);margin-bottom:10px}
+    .case-desc{font-size:13px;line-height:1.75;color:var(--muted)}
+    .case-cta{display:flex;align-items:center;justify-content:center;min-height:200px}
+    .case-cta-inner{display:flex;flex-direction:column;align-items:center;padding:40px 28px;text-align:center}
     /* Grain */
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000}
 
@@ -167,7 +187,7 @@
 
     /* WORK GRID */
     .work-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:56px}
-    .work-item{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--mid2);cursor:none}
+    .work-item{position:relative;overflow:hidden;background:var(--mid2);cursor:none}
     .work-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;filter:brightness(0.85)}
     .work-item:hover img{transform:scale(1.05);filter:brightness(1)}
     .work-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.85) 0%,transparent 60%);opacity:0;transition:opacity 0.3s}
@@ -292,6 +312,8 @@
     /* MOBILE */
     @media(max-width:960px){
       .steps-4col{grid-template-columns:1fr}
+
+      .cases-grid{grid-template-columns:1fr}
       [style*="grid-template-columns:2fr 1fr"],[style*="grid-template-columns:1fr 2fr"],[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}
       .work-item{height:300px!important}
       nav{padding:14px 24px}
@@ -397,96 +419,124 @@
 </div>
 
 <!-- WORK GRID -->
-<section id="work" style="background:var(--mid);padding:112px 0 0">
-  <div style="padding:0 52px 56px">
-    <p class="s-label reveal">Case Studies</p>
-    <h2 class="s-head reveal">Campaigns that<br/><span class="dim">moved the needle.</span></h2>
+<section id="work" style="background:var(--mid);padding:112px 52px">
+  <p class="s-label reveal">Case Studies</p>
+  <h2 class="s-head reveal">Campaigns that<br/><span class="dim">moved the needle.</span></h2>
+
+  <div class="cases-tabs reveal" id="casesTabs">
+    <button class="cases-tab active" data-filter="all">All <span class="cases-count">19</span></button>
+    <button class="cases-tab" data-filter="event">Event <span class="cases-count">3</span></button>
+    <button class="cases-tab" data-filter="launch">Launch <span class="cases-count">2</span></button>
+    <button class="cases-tab" data-filter="awareness">Awareness <span class="cases-count">8</span></button>
+    <button class="cases-tab" data-filter="growth">Growth <span class="cases-count">3</span></button>
+    <button class="cases-tab" data-filter="rebrand">Rebrand <span class="cases-count">3</span></button>
   </div>
 
-  <!-- ROW 1: Large + Medium -->
-  <div style="display:grid;grid-template-columns:2fr 1fr;gap:2px">
-<div class="work-item reveal" style="height:500px;background:var(--mid2)">
-      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
-        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Event Campaign</div>
-        <div class="work-name" style="font-size:clamp(28px,3vw,48px)">Startup Canada</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Young Entrepreneur of the Year Awards in Manitoba &mdash; in partnership with TD Bank, Osler &amp; Futurpreneur.</div>
-      </div>
-    </div>
-<div class="work-item reveal" style="height:500px;background:var(--mid2)">
-      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
-        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Event Campaign</div>
-        <div class="work-name" style="font-size:clamp(24px,2.5vw,40px)">League of Innovators</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Fireside chat with Hootsuite founder Ryan Holmes, turned into a full awareness campaign.</div>
-      </div>
-    </div>
-  </div>
+  <div class="cases-grid" id="casesGrid">
 
-  <!-- ROW 2: Medium + Large -->
-  <div style="display:grid;grid-template-columns:1fr 2fr;gap:2px;margin-top:2px">
-<div class="work-item reveal" style="height:440px;background:var(--mid2)">
-      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
-        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Launch Campaign</div>
-        <div class="work-name" style="font-size:clamp(22px,2vw,36px)">Flavour Shaker Foods</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Full brand launch for a Victoria-based spice startup entering a competitive market.</div>
-      </div>
+    <div class="case-card reveal" data-type="event">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Event Campaign</div><div class="case-name">Startup Canada</div><div class="case-desc">Young Entrepreneur of the Year Awards in Manitoba — in partnership with TD Bank, Osler &amp; Futurpreneur.</div></div>
     </div>
-<div class="work-item reveal" style="height:440px;background:var(--mid2)">
-      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
-        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Growth Campaign</div>
-        <div class="work-name" style="font-size:clamp(24px,2.5vw,44px)">Homestead Cider</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">A brand presence that finally matched the quality of their product.</div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ROW 3: Three equal -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px">
-<div class="work-item reveal" style="height:360px;background:var(--mid2)">
-      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
-        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Brand Awareness Campaign</div>
-        <div class="work-name" style="font-size:28px">Community Futures</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">A campaign built around real business owners in Mission, BC.</div>
+    <div class="case-card reveal" data-type="event">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Event Campaign</div><div class="case-name">League of Innovators</div><div class="case-desc">Fireside chat with Hootsuite founder Ryan Holmes, captured and turned into a full awareness campaign.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="event">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Event Campaign</div><div class="case-name">Good to Grow</div><div class="case-desc">End-to-end event campaign coverage for a growing BC brand.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="launch">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Launch Campaign</div><div class="case-name">Flavour Shaker Foods</div><div class="case-desc">Full brand launch for a Victoria-based spice startup entering a competitive consumer market.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="launch">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Launch Campaign</div><div class="case-name">Motherlove Ferments</div><div class="case-desc">Brand launch campaign for a fermented food startup building an audience before going to market.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Community Futures</div><div class="case-desc">A campaign built around real business owners in Mission, BC, strengthening their community mandate.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">BC Food &amp; Beverage</div><div class="case-desc">Subject matter experts for the BC F&amp;B Growth Hub Accelerator, delivering province-wide marketing education.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Bodega Ridge</div><div class="case-desc">Brand awareness campaign for a Galiano Island winery and resort.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Lanka Jewels</div><div class="case-desc">Awareness campaign for a Vancouver-based fine jewellery brand.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Barakah Eats</div><div class="case-desc">Awareness campaign for a halal food brand building recognition in a crowded market.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Fitness Labs</div><div class="case-desc">Brand awareness campaign for a Vancouver fitness and wellness brand.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Ogden Contracting</div><div class="case-desc">Awareness campaign for a BC-based contracting business building a recognisable local brand.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="awareness">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Awareness Campaign</div><div class="case-name">Sasquatch Pub</div><div class="case-desc">Awareness campaign for a beloved BC pub brand.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="growth">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Growth Campaign</div><div class="case-name">Homestead Cider</div><div class="case-desc">A brand presence that finally matched the quality of their product.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="growth">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Growth Campaign</div><div class="case-name">Bedford Dental</div><div class="case-desc">Growth campaign for a Vancouver dental practice focused on increasing new patient acquisition.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="growth">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Growth Campaign</div><div class="case-name">Ann Marie&#39;s</div><div class="case-desc">Growth campaign for a private dinner service, driving consistent customer bookings and local awareness.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="rebrand">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Rebrand Campaign</div><div class="case-name">Wild Moon Organics</div><div class="case-desc">Full rebrand campaign for an organic wellness brand repositioning in a premium market.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="rebrand">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Rebrand Campaign</div><div class="case-name">Wise Bites</div><div class="case-desc">Rebrand campaign for a health-forward snack brand refreshing their identity for a new market.</div></div>
+    </div>
+
+    <div class="case-card reveal" data-type="rebrand">
+      <div class="case-img-slot"><span>Coming Soon</span></div>
+      <div class="case-body"><div class="case-tag">Rebrand Campaign</div><div class="case-name">Dr. Bee</div><div class="case-desc">Rebrand and product photography campaign for a BC-based superfood honey brand.</div></div>
+    </div>
+
+    <div class="case-card case-cta" id="caseCta">
+      <div class="case-cta-inner">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x=".5" y=".5" width="39" height="39" rx="19.5" stroke="rgba(25,227,45,0.3)"/><path d="M20 12v16M12 20h16" stroke="#19e32d" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:12px">Your brand here</div>
+        <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="margin-top:16px;font-size:11px;padding:10px 20px">Start a campaign &rarr;</a>
       </div>
     </div>
-<div class="work-item reveal" style="height:360px;background:var(--mid2)">
-      <div style="width:100%;height:100%;background:var(--mid2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px dashed rgba(240,239,237,0.1)">
-        <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.25)">Coming Soon</div>
-      </div>
-      <div class="work-overlay" style="opacity:1;background:linear-gradient(to top,rgba(10,10,10,0.95) 0%,transparent 55%)"></div>
-      <div class="work-info" style="opacity:1;transform:none">
-        <div class="work-tag">Growth Campaign</div>
-        <div class="work-name" style="font-size:28px">BC Food &amp; Beverage</div>
-        <div style="font-size:13px;color:rgba(240,239,237,0.5);margin-top:8px;line-height:1.5">Subject matter experts for the BC F&amp;B Growth Hub Accelerator, delivering marketing education province-wide.</div>
-      </div>
-    </div>
-    <!-- Slot 7: placeholder -->
-    <div class="work-item reveal" style="height:360px;background:var(--mid2)">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="rgba(25,227,45,0.3)"/><path d="M20 12v16M12 20h16" stroke="#19e32d" stroke-width="1.5" stroke-linecap="round"/></svg>
-        <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)">Your brand here</div>
-        <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" style="font-size:11px;color:var(--green);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;border:1px solid rgba(25,227,45,0.3);padding:8px 16px;border-radius:2px" onmouseover="this.style.background='rgba(25,227,45,0.08)'" onmouseout="this.style.background='transparent'">Start a campaign &rarr;</a>
-      </div>
-    </div>
+
   </div>
 </section>
 
