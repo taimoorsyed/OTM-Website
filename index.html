@@ -109,6 +109,67 @@
     .case-desc{font-size:13px;line-height:1.75;color:var(--muted)}
     .case-cta{display:flex;align-items:center;justify-content:center;min-height:200px}
     .case-cta-inner{display:flex;flex-direction:column;align-items:center;padding:40px 28px;text-align:center}
+
+    /* ── Manifesto section ── */
+    .manifesto-wrap{margin:48px 0 40px;display:flex;flex-direction:column;gap:0}
+    .manifesto-line{font-family:var(--font-display);font-size:clamp(52px,8vw,110px);line-height:0.95;letter-spacing:0.01em;color:var(--off-white);padding:16px 0;border-bottom:1px solid var(--border)}
+    .manifesto-line:first-child{border-top:1px solid var(--border)}
+    .manifesto-dim{color:rgba(240,239,237,0.25);font-family:var(--font-serif);font-style:italic}
+    .manifesto-green{color:var(--green)}
+    .manifesto-sub{font-size:17px;line-height:1.75;color:var(--muted);max-width:560px}
+
+    /* ── Proof strip ── */
+    .proof-strip{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--border)}
+    .proof-strip-item{padding:44px 32px;border-right:1px solid var(--border);position:relative}
+    .proof-strip-item:last-child{border-right:none}
+    .proof-strip-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease}
+    .proof-strip-item:hover::before{transform:scaleX(1)}
+    .proof-strip-num{font-family:var(--font-display);font-size:clamp(44px,5vw,72px);line-height:1;color:var(--off-white);margin-bottom:10px}
+    .proof-strip-label{font-size:13px;line-height:1.6;color:var(--muted)}
+    .proof-strip-statement{padding:72px 52px;text-align:center;background:var(--mid);display:flex;flex-direction:column;align-items:center;border-top:1px solid var(--border)}
+    .proof-strip-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(22px,3vw,36px);line-height:1.5;color:rgba(240,239,237,0.82);max-width:680px}
+
+    /* ── Campaign Quiz Overlay ── */
+    .quiz-overlay{position:fixed;inset:0;background:rgba(10,10,10,0.97);z-index:800;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s ease;padding:24px}
+    .quiz-overlay.open{opacity:1;pointer-events:all}
+    .quiz-box{width:100%;max-width:640px;position:relative}
+    .quiz-close{position:absolute;top:-44px;right:0;background:none;border:none;color:var(--muted);font-size:28px;cursor:none;line-height:1;transition:color 0.2s;font-weight:300}
+    .quiz-close:hover{color:var(--off-white)}
+    .quiz-progress{display:flex;gap:4px;margin-bottom:36px}
+    .quiz-pip{height:2px;flex:1;background:rgba(240,239,237,0.12);border-radius:2px;transition:background 0.3s}
+    .quiz-pip.done{background:var(--off-white)}
+    .quiz-pip.active{background:rgba(240,239,237,0.5)}
+    .quiz-step-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+    .quiz-question{font-family:var(--font-display);font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:0.02em;color:var(--off-white);margin-bottom:32px}
+    .quiz-options{display:flex;flex-direction:column;gap:6px}
+    .quiz-opt{background:transparent;border:1px solid var(--border);padding:16px 20px;font-family:var(--font-body);font-size:15px;color:rgba(240,239,237,0.65);cursor:none;text-align:left;transition:all 0.2s;display:flex;align-items:center;gap:14px;font-weight:300}
+    .quiz-opt:hover{border-color:var(--border-light);color:var(--off-white)}
+    .quiz-opt.selected{border-color:var(--green);color:var(--off-white);background:rgba(25,227,45,0.05)}
+    .quiz-opt-letter{width:22px;height:22px;border-radius:50%;border:1px solid rgba(240,239,237,0.2);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--muted);flex-shrink:0;transition:all 0.2s}
+    .quiz-opt.selected .quiz-opt-letter{background:var(--green);border-color:var(--green);color:var(--black)}
+    .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px}
+    .quiz-back-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:none;font-family:var(--font-body);transition:color 0.2s}
+    .quiz-back-btn:hover{color:var(--off-white)}
+    .quiz-next-btn{background:var(--green);color:var(--black);border:none;padding:12px 28px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:none;opacity:0.3;transition:opacity 0.2s,transform 0.15s;font-family:var(--font-body)}
+    .quiz-next-btn.ready{opacity:1}
+    .quiz-next-btn.ready:hover{transform:translateY(-1px)}
+    .quiz-result{display:none}
+    .quiz-result-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+    .quiz-result-type{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);line-height:0.95;letter-spacing:0.02em;color:var(--off-white);margin-bottom:24px}
+    .quiz-result-why{font-size:16px;line-height:1.8;color:var(--muted);margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+    .quiz-result-cases-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(240,239,237,0.3);margin-bottom:14px}
+    .quiz-result-cases{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:28px}
+    .quiz-result-case{background:var(--mid2);border:1px solid var(--border);padding:20px}
+    .quiz-result-case-name{font-family:var(--font-display);font-size:24px;letter-spacing:0.02em;color:var(--off-white);margin-bottom:6px}
+    .quiz-result-case-desc{font-size:12px;color:var(--muted);line-height:1.6}
+    .quiz-apply-btn{background:var(--green);color:var(--black);padding:16px 36px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s;margin-right:12px}
+    .quiz-apply-btn:hover{background:var(--green-dim);transform:translateY(-1px)}
+    .quiz-retry-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:16px 28px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;cursor:none;font-family:var(--font-body);transition:all 0.2s}
+    .quiz-retry-btn:hover{border-color:var(--border-light);color:var(--off-white)}
+    @media(max-width:640px){
+      .quiz-result-cases{grid-template-columns:1fr}
+      .quiz-question{font-size:28px}
+    }
     /* Grain */
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000}
 
@@ -252,15 +313,6 @@
     .p-outcome-desc{font-size:12px;color:var(--muted);line-height:1.6}
     .p-note{font-size:12px;color:rgba(240,239,237,0.28);border-top:1px solid var(--border);padding-top:28px;line-height:1.7}
 
-    /* LOCATIONS */
-    .locations-section{background:var(--mid)}
-    .locations-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
-    .location-card{border:1px solid var(--border);padding:36px 28px;transition:border-color 0.3s;cursor:none;text-decoration:none;display:block}
-    .location-card:hover{border-color:rgba(25,227,45,0.2)}
-    .location-city{font-family:var(--font-display);font-size:36px;letter-spacing:0.02em;line-height:1;color:var(--off-white);margin-bottom:8px}
-    .location-region{font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-    .location-desc{font-size:13px;line-height:1.7;color:var(--muted)}
-
     /* FAQ */
     .faq-section{background:var(--black)}
     .faq-list{margin-top:56px;max-width:740px}
@@ -312,6 +364,11 @@
     /* MOBILE */
     @media(max-width:960px){
       .steps-4col{grid-template-columns:1fr}
+      .manifesto-line{font-size:clamp(36px,11vw,64px);padding:12px 0}
+      .proof-strip{grid-template-columns:1fr 1fr}
+      .proof-strip-item:nth-child(2n){border-right:none}
+      .proof-strip-item{border-bottom:1px solid var(--border)}
+      .proof-strip-statement{padding:48px 24px}
 
       .cases-grid{grid-template-columns:1fr}
       [style*="grid-template-columns:2fr 1fr"],[style*="grid-template-columns:1fr 2fr"],[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}
@@ -384,7 +441,7 @@
     <p class="hero-sub">Disconnected tactics look like activity but produce no momentum. We build campaigns around a single objective so every dollar you spend builds on the last one, and your marketing finally compounds into results.</p>
     <div class="hero-actions">
       <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-white">Start Your Campaign</a>
-      <a href="#what-is-a-campaign" class="btn-text">See how it works &rarr;</a>
+      <button class="btn-text" onclick="openQuiz()" style="background:none;border:none;cursor:none;font-family:var(--font-body);font-size:13px;letter-spacing:0.05em;color:var(--muted);transition:color 0.2s" onmouseover="this.style.color='var(--off-white)'" onmouseout="this.style.color='var(--muted)'">Not sure? Take the quiz &rarr;</button>
     </div>
 
 </section>
@@ -573,28 +630,15 @@
 </div>
 
 <!-- WHAT IS A CAMPAIGN -->
-<section class="campaign-explainer" id="what-is-a-campaign">
+<section class="campaign-explainer" id="what-is-a-campaign" style="background:var(--mid);padding:112px 52px;overflow:hidden">
   <p class="s-label reveal">The Problem</p>
-  <h2 class="s-head reveal">Most marketing fails<br/>for one reason.</h2>
-  <p class="s-intro reveal">It is not a campaign. It is a collection of disconnected tasks that look like activity but build no momentum. A logo here. A video there. Some social posts. Nothing tied to an objective. Nothing compounding into growth.</p>
-  <div class="explainer-grid">
-    <div class="explainer-col reveal">
-      <div class="explainer-col-label">What most businesses experience</div>
-      <div class="explainer-row"><span class="row-icon x">&#x2715;</span>Spend money on marketing with no clear return</div>
-      <div class="explainer-row"><span class="row-icon x">&#x2715;</span>Tactics that feel busy but produce no momentum</div>
-      <div class="explainer-row"><span class="row-icon x">&#x2715;</span>Starting from scratch every time you need something</div>
-      <div class="explainer-row"><span class="row-icon x">&#x2715;</span>No clear story connecting your brand to your audience</div>
-      <div class="explainer-row"><span class="row-icon x">&#x2715;</span>Marketing that costs money without building anything</div>
-    </div>
-    <div class="explainer-col highlight reveal">
-      <div class="explainer-col-label">What a campaign produces</div>
-      <div class="explainer-row"><span class="row-icon">&#x2713;</span>A market that recognises your brand and trusts it</div>
-      <div class="explainer-row"><span class="row-icon">&#x2713;</span>Momentum that builds instead of resetting every month</div>
-      <div class="explainer-row"><span class="row-icon">&#x2713;</span>A clear story your audience actually connects with</div>
-      <div class="explainer-row"><span class="row-icon">&#x2713;</span>Marketing that gets stronger the longer it runs</div>
-      <div class="explainer-row"><span class="row-icon">&#x2713;</span>Customers who come to you instead of you chasing them</div>
-    </div>
+  <div class="manifesto-wrap">
+    <div class="manifesto-line reveal">Most marketing produces<br/><span class="manifesto-dim">activity, not results.</span></div>
+    <div class="manifesto-line reveal">They just don&#39;t have<br/><span class="manifesto-dim">a campaign.</span></div>
+    <div class="manifesto-line reveal">Tactics look busy.<br/><span class="manifesto-green">Campaigns produce results.</span></div>
+    <div class="manifesto-line reveal">One objective.<br/><span class="manifesto-dim">Everything serves it.</span></div>
   </div>
+  <p class="manifesto-sub reveal">Disconnected services reset every month. A campaign compounds. The difference is not budget — it&#39;s thinking.</p>
 </section>
 
 <!-- CAMPAIGN TYPES -->
@@ -674,26 +718,32 @@
 </section>
 
 <!-- OTM VS OTHERS -->
-<section class="diff-section">
-  <p class="s-label reveal">Why OTM</p>
-  <h2 class="s-head reveal">The difference<br/><span class="dim">is the thinking.</span></h2>
-  <div class="diff-grid">
-    <div class="diff-col them reveal">
-      <div class="diff-col-label">Other Agencies</div>
-      <div class="diff-item"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>Sell individual services with no strategic thread</div>
-      <div class="diff-item"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>Strategy and production are siloed</div>
-      <div class="diff-item"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>One deliverable, then start from scratch next time</div>
-      <div class="diff-item"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>High overhead passed directly to the client</div>
-      <div class="diff-item"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>Content with no strategic purpose</div>
+<section style="background:var(--black);padding:0">
+  <div class="proof-strip">
+    <div class="proof-strip-item reveal">
+      <div class="proof-strip-num">90+</div>
+      <div class="proof-strip-label">Brands served across North America</div>
     </div>
-    <div class="diff-col us reveal">
-      <div class="diff-col-label">Overtime Marketing</div>
-      <div class="diff-item"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>End-to-end campaigns built around one objective</div>
-      <div class="diff-item"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>Strategy and execution are the same team</div>
-      <div class="diff-item"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>Full campaign that compounds in value over time</div>
-      <div class="diff-item"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>Lean team, premium output, accessible pricing</div>
-      <div class="diff-item"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>Every piece of content serves the campaign goal</div>
+    <div class="proof-strip-item reveal">
+      <div class="proof-strip-num">5</div>
+      <div class="proof-strip-label">Campaign types. One objective each.</div>
     </div>
+    <div class="proof-strip-item reveal">
+      <div class="proof-strip-num">30+</div>
+      <div class="proof-strip-label">Five-star reviews from real clients</div>
+    </div>
+    <div class="proof-strip-item reveal">
+      <div class="proof-strip-num">1</div>
+      <div class="proof-strip-label">Strategic objective per campaign. Always.</div>
+    </div>
+    <div class="proof-strip-item reveal">
+      <div class="proof-strip-num">$7,500</div>
+      <div class="proof-strip-label">Campaigns starting from</div>
+    </div>
+  </div>
+  <div class="proof-strip-statement reveal">
+    <span class="proof-strip-quote">Strategy first.<br/><span style="color:rgba(240,239,237,0.4);font-style:normal;font-family:var(--font-body);font-size:clamp(14px,1.5vw,18px);letter-spacing:0.02em">Everything else follows.</span></span>
+    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="margin-top:28px;display:inline-block">See if we&#39;re the right fit &rarr;</a>
   </div>
 </section>
 
@@ -782,34 +832,7 @@
   </div>
 </section>
 
-<!-- LOCATIONS -->
-<section class="locations-section" id="locations">
-  <p class="s-label reveal">Where We Work</p>
-  <h2 class="s-head reveal">Serving businesses<br/><span class="dim">across North America.</span></h2>
-  <p class="s-intro reveal">Based in Vancouver, we work with businesses from BC to Ontario, coast to coast in the US, and everywhere in between. If your business is serious about growth, location is not a barrier.</p>
-  <div class="locations-grid">
-    <a href="/pages/marketing-agency-vancouver.html" class="location-card reveal">
-      <div class="location-city">Vancouver</div>
-      <div class="location-region">British Columbia</div>
-      <div class="location-desc">Our home market. We have built campaigns for businesses across Metro Vancouver and the Fraser Valley.</div>
-    </a>
-    <a href="/pages/marketing-agency-toronto.html" class="location-card reveal">
-      <div class="location-city">Toronto</div>
-      <div class="location-region">Ontario</div>
-      <div class="location-desc">We work with Toronto-based businesses looking to grow their brand nationally and internationally.</div>
-    </a>
-    <a href="/pages/marketing-agency-calgary.html" class="location-card reveal">
-      <div class="location-city">Calgary</div>
-      <div class="location-region">Alberta</div>
-      <div class="location-desc">We help Calgary businesses build campaigns that cut through a competitive and fast-growing market.</div>
-    </a>
-    <a href="/pages/marketing-agency-canada.html" class="location-card reveal">
-      <div class="location-city">All of North America</div>
-      <div class="location-region">USA &amp; Canada</div>
-      <div class="location-desc">We work with businesses across the US and Canada. If you have a clear objective, we can build a campaign around it.</div>
-    </a>
-  </div>
-</section>
+
 
 
 <!-- WHAT HAPPENS NEXT -->
@@ -1057,5 +1080,37 @@
   resetProgress();
   timer=setInterval(next,INTERVAL);
 </script>
+
+<!-- CAMPAIGN QUIZ OVERLAY -->
+<div class="quiz-overlay" id="quizOverlay">
+  <div class="quiz-box">
+    <button class="quiz-close" onclick="closeQuiz()" aria-label="Close quiz">&times;</button>
+
+    <!-- Questions screen -->
+    <div id="quizQuestions">
+      <div class="quiz-progress" id="quizProgress"></div>
+      <div class="quiz-step-label" id="quizStepLabel"></div>
+      <div class="quiz-question" id="quizQuestion"></div>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-nav">
+        <button class="quiz-back-btn" id="quizBack" onclick="quizBack()">&#x2190; Back</button>
+        <button class="quiz-next-btn" id="quizNext" onclick="quizNext()">Next</button>
+      </div>
+    </div>
+
+    <!-- Result screen -->
+    <div class="quiz-result" id="quizResult">
+      <div class="quiz-result-tag">Your recommended campaign</div>
+      <div class="quiz-result-type" id="quizResultType"></div>
+      <div class="quiz-result-why" id="quizResultWhy"></div>
+      <div class="quiz-result-cases-label">Relevant work</div>
+      <div class="quiz-result-cases" id="quizResultCases"></div>
+      <div>
+        <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="quiz-apply-btn">Apply for a campaign &rarr;</a>
+        <button class="quiz-retry-btn" onclick="quizRestart()">Retake quiz</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
