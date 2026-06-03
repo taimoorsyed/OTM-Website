@@ -126,8 +126,6 @@
     .proof-strip-item:hover::before{transform:scaleX(1)}
     .proof-strip-num{font-family:var(--font-display);font-size:clamp(44px,5vw,72px);line-height:1;color:var(--off-white);margin-bottom:10px}
     .proof-strip-label{font-size:13px;line-height:1.6;color:var(--muted)}
-    .proof-strip-statement{padding:72px 52px;text-align:center;background:var(--mid);display:flex;flex-direction:column;align-items:center;border-top:1px solid var(--border)}
-    .proof-strip-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(22px,3vw,36px);line-height:1.5;color:rgba(240,239,237,0.82);max-width:680px}
 
     /* ── Campaign Quiz Overlay ── */
     .quiz-overlay{position:fixed;inset:0;background:rgba(10,10,10,0.97);z-index:800;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s ease;padding:24px}
@@ -368,7 +366,6 @@
       .proof-strip{grid-template-columns:1fr 1fr}
       .proof-strip-item:nth-child(2n){border-right:none}
       .proof-strip-item{border-bottom:1px solid var(--border)}
-      .proof-strip-statement{padding:48px 24px}
 
       .cases-grid{grid-template-columns:1fr}
       [style*="grid-template-columns:2fr 1fr"],[style*="grid-template-columns:1fr 2fr"],[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}
@@ -420,6 +417,7 @@
     <li><a href="#campaign-types">Campaigns</a></li>
     <li><a href="#work">Our Work</a></li>
     <li><a href="/pages/about.html">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green">Get a Quote</a></li>
   </ul>
@@ -633,10 +631,10 @@
 <section class="campaign-explainer" id="what-is-a-campaign" style="background:var(--mid);padding:112px 52px;overflow:hidden">
   <p class="s-label reveal">The Problem</p>
   <div class="manifesto-wrap">
-    <div class="manifesto-line reveal">Most marketing produces<br/><span class="manifesto-dim">activity, not results.</span></div>
-    <div class="manifesto-line reveal">They just don&#39;t have<br/><span class="manifesto-dim">a campaign.</span></div>
-    <div class="manifesto-line reveal">Tactics look busy.<br/><span class="manifesto-green">Campaigns produce results.</span></div>
-    <div class="manifesto-line reveal">One objective.<br/><span class="manifesto-dim">Everything serves it.</span></div>
+    <div class="manifesto-line reveal">Most marketing budgets<br/><span class="manifesto-dim">go nowhere.</span></div>
+    <div class="manifesto-line reveal">Not because the<br/><span class="manifesto-dim">business is broken.</span></div>
+    <div class="manifesto-line reveal">Because there&#39;s no<br/><span class="manifesto-green">campaign behind it.</span></div>
+    <div class="manifesto-line reveal">Just tactics pretending<br/><span class="manifesto-dim">to be strategy.</span></div>
   </div>
   <p class="manifesto-sub reveal">Disconnected services reset every month. A campaign compounds. The difference is not budget — it&#39;s thinking.</p>
 </section>
@@ -741,38 +739,11 @@
       <div class="proof-strip-label">Campaigns starting from</div>
     </div>
   </div>
-  <div class="proof-strip-statement reveal">
-    <span class="proof-strip-quote">Strategy first.<br/><span style="color:rgba(240,239,237,0.4);font-style:normal;font-family:var(--font-body);font-size:clamp(14px,1.5vw,18px);letter-spacing:0.02em">Everything else follows.</span></span>
-    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="margin-top:28px;display:inline-block">See if we&#39;re the right fit &rarr;</a>
-  </div>
 </section>
 
 
 
-<!-- WHO WE WORK WITH -->
-<section style="background:var(--mid);padding:112px 52px">
-  <p class="s-label reveal">Who We Work With</p>
-  <h2 class="s-head reveal">We are not right<br/><span class="dim">for everyone.</span></h2>
-  <p class="s-intro reveal">We do our best work with a specific type of client. Read this before you reach out so we do not waste each other's time.</p>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px">
-    <div style="padding:52px 48px;border:1px solid var(--border);background:rgba(240,239,237,0.02)">
-      <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.3);margin-bottom:32px">OTM is probably not right for you if</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You are looking for the cheapest option available</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You want to approve every single tactic before it happens</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You do not have a clear business objective for the campaign</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You need results within the next two weeks</div>
-      <div style="display:flex;gap:16px;padding:16px 0;font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You are not ready to invest at least $7,500 in your marketing</div>
-    </div>
-    <div style="padding:52px 48px;border:1px solid rgba(25,227,45,0.15);background:rgba(25,227,45,0.03)">
-      <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin-bottom:32px">OTM is a great fit if</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You have a clear objective and want a campaign built around it</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You are ready to trust a team with strategy and execution</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You want marketing that compounds instead of resetting every month</div>
-      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You are serious about growth and willing to invest in it properly</div>
-      <div style="display:flex;gap:16px;padding:16px 0;font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You want a partner who will tell you the truth, not just what you want to hear</div>
-    </div>
-  </div>
-</section>
+
 <!-- REVIEWS -->
 <section class="reviews-section" id="reviews">
   <p class="s-label reveal">What Clients Say</p>
@@ -866,6 +837,31 @@
     </div>
   </div>
 </section>
+<!-- WHO WE WORK WITH -->
+<section style="background:var(--mid);padding:112px 52px">
+  <p class="s-label reveal">Who We Work With</p>
+  <h2 class="s-head reveal">We are not right<br/><span class="dim">for everyone.</span></h2>
+  <p class="s-intro reveal">We do our best work with a specific type of client. Read this before you reach out so we do not waste each other's time.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px">
+    <div style="padding:52px 48px;border:1px solid var(--border);background:rgba(240,239,237,0.02)">
+      <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,239,237,0.3);margin-bottom:32px">OTM is probably not right for you if</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You are looking for the cheapest option available</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You want to approve every single tactic before it happens</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You do not have a clear business objective for the campaign</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You need results within the next two weeks</div>
+      <div style="display:flex;gap:16px;padding:16px 0;font-size:15px;color:rgba(240,239,237,0.4)"><span style="color:rgba(240,239,237,0.2);flex-shrink:0">&#x2715;</span>You are not ready to invest at least $7,500 in your marketing</div>
+    </div>
+    <div style="padding:52px 48px;border:1px solid rgba(25,227,45,0.15);background:rgba(25,227,45,0.03)">
+      <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin-bottom:32px">OTM is a great fit if</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You have a clear objective and want a campaign built around it</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You are ready to trust a team with strategy and execution</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You want marketing that compounds instead of resetting every month</div>
+      <div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You are serious about growth and willing to invest in it properly</div>
+      <div style="display:flex;gap:16px;padding:16px 0;font-size:15px;color:rgba(240,239,237,0.82)"><span style="color:var(--green);flex-shrink:0">&#x2713;</span>You want a partner who will tell you the truth, not just what you want to hear</div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq-section" id="faq">
   <p class="s-label reveal">FAQ</p>
@@ -914,7 +910,16 @@
     <div>
       <img src="/logo.svg" alt="Overtime Marketing" class="footer-logo-img"/>
       <div class="footer-tagline">Full campaign marketing partner for ambitious businesses across North America. Based in Vancouver, BC.</div>
-      <div class="footer-social">
+      <div style="margin-top:20px">
+        <a href="https://bcfb.ca" target="_blank" rel="noopener" title="BC Food &amp; Beverage Proud Member">
+          <img src="https://overtimemarketing.ca/wp-content/uploads/2024/09/bcfb-proud-member-white.png"
+               alt="BC Food and Beverage Proud Member"
+               style="height:48px;width:auto;opacity:0.65;transition:opacity 0.2s"
+               onmouseover="this.style.opacity='1'"
+               onmouseout="this.style.opacity='0.65'"/>
+        </a>
+      </div>
+      <div class="footer-social" style="margin-top:16px">
         <a href="https://www.instagram.com/overtime.marketing/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.linkedin.com/company/90551355/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:info@overtimemarketing.ca">Email</a>
@@ -937,7 +942,6 @@
         <li><a href="#work">Our Work</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#locations">Locations</a></li>
         <li><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb">Get a Quote</a></li>
       </ul>
     </div>
