@@ -168,6 +168,17 @@
       .quiz-result-cases{grid-template-columns:1fr}
       .quiz-question{font-size:28px}
     }
+
+    .mobile-nav{position:fixed;inset:0;background:rgba(10,10,10,0.98);z-index:490;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity 0.3s ease;backdrop-filter:blur(12px)}
+    .mobile-nav.open{opacity:1;pointer-events:all}
+    .mobile-nav a{font-family:var(--font-display);font-size:48px;letter-spacing:0.02em;color:rgba(240,239,237,0.8);text-decoration:none;transition:color 0.2s;line-height:1.2}
+    .mobile-nav a:hover{color:var(--green)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:501;position:relative}
+    .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--off-white);transition:transform 0.3s,opacity 0.3s}
+    .nav-toggle.open span:nth-child(1){transform:rotate(45deg) translate(4px,5px)}
+    .nav-toggle.open span:nth-child(2){opacity:0}
+    .nav-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px)}
+    @media(max-width:960px){.nav-toggle{display:flex}}
     /* Grain */
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:8000}
 
@@ -400,6 +411,15 @@
 </head>
 <body>
 
+<div class="mobile-nav" id="mobileNav">
+  <a href="#what-is-a-campaign" onclick="closeMobileNav()">What We Do</a>
+  <a href="#campaign-types" onclick="closeMobileNav()">Campaigns</a>
+  <a href="#work" onclick="closeMobileNav()">Our Work</a>
+  <a href="/pages/about.html" onclick="closeMobileNav()">About</a>
+  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;margin-top:12px">Get a Quote</a>
+</div>
 <div class="cursor" id="cursor"></div>
 <div class="sticky-cta" id="stickyCta">
   <div class="sticky-cta-text"><strong>Ready to run a real campaign?</strong> &nbsp; Tell us your objective and we will scope it in 30 minutes.</div>
@@ -412,7 +432,7 @@
   <a href="/" class="nav-logo">
     <img src="/logo.svg" alt="Overtime Marketing"/>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#what-is-a-campaign">What We Do</a></li>
     <li><a href="#campaign-types">Campaigns</a></li>
     <li><a href="#work">Our Work</a></li>
