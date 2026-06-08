@@ -180,7 +180,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 <!-- HEADER — logo + one CTA, nothing else -->
 <header class="lp-header">
   <a href="/" class="lp-logo" aria-label="Overtime Marketing"><img src="/logo.svg" alt="OTM — Overtime Marketing"/></a>
-  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="lp-header-cta">Apply for a Campaign</a>
+  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="lp-header-cta" onclick="return gtagSendEvent(this.href)">Apply for a Campaign</a>
 </header>
 
 <!-- HERO -->
@@ -190,7 +190,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   <h1 class="hero-h1">Campaign Marketing.<br/><em>Start to Finish.</em></h1>
   <p class="hero-sub">For brands that need a real campaign &#8212; not a freelancer, not a retainer. Starting at $7,500.</p>
   <div class="hero-cta">
-    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-primary">Apply for a Campaign &rarr;</a>
+    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-primary" onclick="return gtagSendEvent(this.href)">Apply for a Campaign &rarr;</a>
   </div>
   <p class="hero-note">Takes 5 minutes &nbsp;&middot;&nbsp; No commitment &nbsp;&middot;&nbsp; Response within 24 hours</p>
 </section>
@@ -417,7 +417,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </div>
 
   <div style="text-align:center;margin-top:56px">
-    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-primary">Apply for a Campaign &rarr;</a>
+    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-primary" onclick="return gtagSendEvent(this.href)">Apply for a Campaign &rarr;</a>
   </div>
 </section>
 
@@ -426,7 +426,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   <h2 class="final-cta-head reveal">Ready to run<br/><em>a real campaign?</em></h2>
   <p class="final-cta-sub reveal">Tell us your objective. We will scope it in 30 minutes.</p>
   <div class="reveal">
-    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-primary">Apply for a Campaign &rarr;</a>
+    <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-primary" onclick="return gtagSendEvent(this.href)">Apply for a Campaign &rarr;</a>
     <p class="final-note">5 minutes &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Response within 24 hours</p>
   </div>
 </section>
@@ -500,6 +500,22 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     entries.forEach(e=>{if(e.isIntersecting){countUp(c1,90,1400,'+');stripObs.unobserve(e.target)}});
   },{threshold:0.5});
   if(c1) stripObs.observe(c1.closest('.trust-item'));
+</script>
+
+<!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'ads_conversion_Form_1', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+    });
+    return false;
+  }
 </script>
 </body>
 </html>

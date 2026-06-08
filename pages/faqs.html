@@ -82,7 +82,7 @@ footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(
   <a href="/pages/about.html" onclick="closeMobileNav()">About</a>
   <a href="/#pricing" onclick="closeMobileNav()">Pricing</a>
   <a href="/pages/faqs.html" onclick="closeMobileNav()">FAQs</a>
-  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;margin-top:12px">Get a Quote</a>
+  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;margin-top:12px" onclick="return gtagSendEvent(this.href)">Get a Quote</a>
 </div>
 <nav id="mainNav">
   <a href="/" class="nav-logo"><img src="/logo.svg" alt="Overtime Marketing"/></a>
@@ -93,7 +93,7 @@ footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(
     <li><a href="/pages/about.html">About</a></li>
     <li><a href="/#pricing">Pricing</a></li>
     <li><a href="/pages/faqs.html" style="color:var(--off-white)">FAQs</a></li>
-    <li><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="color:#0a0a0a">Get a Quote</a></li>
+    <li><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="color:#0a0a0a" onclick="return gtagSendEvent(this.href)">Get a Quote</a></li>
   </ul>
   <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
 </nav>
@@ -124,7 +124,7 @@ footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(
   <p class="s-label reveal" style="position:relative;z-index:1">Still have questions?</p>
   <h2 class="s-head reveal" style="max-width:600px;margin:0 auto 20px;position:relative;z-index:1">The fastest answer is<br/><span class="dim">a 30-minute call.</span></h2>
   <p style="font-size:17px;color:var(--muted);max-width:400px;margin:0 auto 40px;line-height:1.7;position:relative;z-index:1">Tell us your objective and we will scope the campaign. No obligation.</p>
-  <div style="position:relative;z-index:1"><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;padding:16px 40px">Apply for a Campaign &rarr;</a></div>
+  <div style="position:relative;z-index:1"><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;padding:16px 40px" onclick="return gtagSendEvent(this.href)">Apply for a Campaign &rarr;</a></div>
 </section>
 <footer>
   <div class="footer-top">
@@ -148,6 +148,22 @@ document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',(
 const navToggle=document.getElementById('navToggle'),mobileNav=document.getElementById('mobileNav');
 if(navToggle&&mobileNav){navToggle.addEventListener('click',()=>{navToggle.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':''});}
 function closeMobileNav(){if(navToggle)navToggle.classList.remove('open');if(mobileNav)mobileNav.classList.remove('open');document.body.style.overflow='';}
+</script>
+
+<!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'ads_conversion_Form_1', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+    });
+    return false;
+  }
 </script>
 </body>
 </html>

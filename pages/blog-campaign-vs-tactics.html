@@ -129,7 +129,7 @@ footer{padding:56px 52px;border-top:1px solid var(--border);display:grid;grid-te
   <a href="/pages/about.html" onclick="closeMobileNav()">About</a>
   <a href="/#pricing" onclick="closeMobileNav()">Pricing</a>
   <a href="/#faq" onclick="closeMobileNav()">FAQ</a>
-  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;margin-top:12px">Get a Quote</a>
+  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="font-size:13px;margin-top:12px" onclick="return gtagSendEvent(this.href)">Get a Quote</a>
 </div>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
@@ -142,7 +142,7 @@ footer{padding:56px 52px;border-top:1px solid var(--border);display:grid;grid-te
     <li><a href="/pages/about.html">About</a></li>
     <li><a href="/#pricing">Pricing</a></li>
     <li><a href="/#faq">FAQ</a></li>
-    <li><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="color:#0a0a0a">Get a Quote</a></li>
+    <li><a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" style="color:#0a0a0a" onclick="return gtagSendEvent(this.href)">Get a Quote</a></li>
   </ul>
   <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
 </nav>
@@ -194,7 +194,7 @@ footer{padding:56px 52px;border-top:1px solid var(--border);display:grid;grid-te
 <div class="cta-inline">
   <div class="cta-inline-head">Ready to run a real campaign?</div>
   <div class="cta-inline-sub">Tell us what your business needs to achieve. We will build the campaign around it. Starting at $7,500.</div>
-  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green">Start Your Campaign &rarr;</a>
+  <a href="https://cvd2z4o5oc8.typeform.com/to/dUosMOdb" class="btn-green" onclick="return gtagSendEvent(this.href)">Start Your Campaign &rarr;</a>
 </div>
 </div>
 <div class="related-section">
@@ -271,6 +271,22 @@ const nav=document.getElementById('mainNav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
 const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);obs.unobserve(e.target)}});}),{threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+<!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'ads_conversion_Form_1', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+    });
+    return false;
+  }
 </script>
 </body>
 </html>
