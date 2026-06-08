@@ -30,6 +30,14 @@
   ],
   "rewrites": [
     {
+      "source": "/start",
+      "destination": "/pages/go.html"
+    },
+    {
+      "source": "/go",
+      "destination": "/pages/go.html"
+    },
+    {
       "source": "/faq",
       "destination": "/pages/faqs.html"
     },
