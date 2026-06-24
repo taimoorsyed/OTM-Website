@@ -1,0 +1,177 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about-us",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#campaign-types",
+      "permanent": true
+    },
+    {
+      "source": "/content-campaigns",
+      "destination": "/pages/launch-campaign-agency.html",
+      "permanent": true
+    },
+    {
+      "source": "/our-work",
+      "destination": "/#work",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/services",
+      "destination": "/pages/services.html"
+    },
+    {
+      "source": "/start",
+      "destination": "/pages/go.html"
+    },
+    {
+      "source": "/go",
+      "destination": "/pages/go.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/pages/faqs.html"
+    },
+    {
+      "source": "/faqs",
+      "destination": "/pages/faqs.html"
+    },
+    {
+      "source": "/reviews",
+      "destination": "/pages/reviews.html"
+    },
+    {
+      "source": "/marketing-agency-vancouver",
+      "destination": "/pages/marketing-agency-vancouver.html"
+    },
+    {
+      "source": "/marketing-agency-surrey",
+      "destination": "/pages/marketing-agency-surrey.html"
+    },
+    {
+      "source": "/marketing-agency-kelowna",
+      "destination": "/pages/marketing-agency-kelowna.html"
+    },
+    {
+      "source": "/marketing-agency-abbotsford",
+      "destination": "/pages/marketing-agency-abbotsford.html"
+    },
+    {
+      "source": "/marketing-agency-victoria",
+      "destination": "/pages/marketing-agency-victoria.html"
+    },
+    {
+      "source": "/marketing-agency-burnaby",
+      "destination": "/pages/marketing-agency-burnaby.html"
+    },
+    {
+      "source": "/marketing-agency-toronto",
+      "destination": "/pages/marketing-agency-toronto.html"
+    },
+    {
+      "source": "/marketing-agency-calgary",
+      "destination": "/pages/marketing-agency-calgary.html"
+    },
+    {
+      "source": "/marketing-agency-ottawa",
+      "destination": "/pages/marketing-agency-ottawa.html"
+    },
+    {
+      "source": "/marketing-agency-edmonton",
+      "destination": "/pages/marketing-agency-edmonton.html"
+    },
+    {
+      "source": "/marketing-agency-winnipeg",
+      "destination": "/pages/marketing-agency-winnipeg.html"
+    },
+    {
+      "source": "/marketing-agency-halifax",
+      "destination": "/pages/marketing-agency-halifax.html"
+    },
+    {
+      "source": "/marketing-agency-ontario",
+      "destination": "/pages/marketing-agency-ontario.html"
+    },
+    {
+      "source": "/marketing-agency-us",
+      "destination": "/pages/marketing-agency-us.html"
+    },
+    {
+      "source": "/marketing-agency-canada",
+      "destination": "/pages/marketing-agency-canada.html"
+    },
+    {
+      "source": "/launch-campaign-agency",
+      "destination": "/pages/launch-campaign-agency.html"
+    },
+    {
+      "source": "/brand-awareness-campaign-agency",
+      "destination": "/pages/brand-awareness-campaign-agency.html"
+    },
+    {
+      "source": "/growth-campaign-agency",
+      "destination": "/pages/growth-campaign-agency.html"
+    },
+    {
+      "source": "/event-campaign-agency",
+      "destination": "/pages/event-campaign-agency.html"
+    },
+    {
+      "source": "/rebrand-campaign-agency",
+      "destination": "/pages/rebrand-campaign-agency.html"
+    },
+    {
+      "source": "/why-your-marketing-isnt-working",
+      "destination": "/pages/why-your-marketing-isnt-working.html"
+    },
+    {
+      "source": "/what-is-a-marketing-campaign",
+      "destination": "/pages/what-is-a-marketing-campaign.html"
+    },
+    {
+      "source": "/marketing-agency-for-small-business",
+      "destination": "/pages/marketing-agency-for-small-business.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/pages/about.html"
+    },
+    {
+      "source": "/blog-why-marketing-isnt-working",
+      "destination": "/pages/blog-why-marketing-isnt-working.html"
+    },
+    {
+      "source": "/blog-what-is-a-campaign",
+      "destination": "/pages/blog-what-is-a-campaign.html"
+    },
+    {
+      "source": "/blog-how-to-launch-product-canada",
+      "destination": "/pages/blog-how-to-launch-product-canada.html"
+    },
+    {
+      "source": "/blog-marketing-agency-vancouver-guide",
+      "destination": "/pages/blog-marketing-agency-vancouver-guide.html"
+    },
+    {
+      "source": "/blog-marketing-budget-small-business",
+      "destination": "/pages/blog-marketing-budget-small-business.html"
+    },
+    {
+      "source": "/blog-campaign-vs-tactics",
+      "destination": "/pages/blog-campaign-vs-tactics.html"
+    }
+  ]
+}
