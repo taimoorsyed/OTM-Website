@@ -60,16 +60,37 @@ section{padding:88px 52px}
 .faq-category{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--green);margin:48px 0 0;padding-bottom:12px;border-bottom:1px solid rgba(25,227,45,0.15)}
 .cta-band{text-align:center;background:var(--mid);position:relative;overflow:hidden;padding:88px 52px}
 .cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(25,227,45,0.05) 0%,transparent 70%)}
-footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(--mid)}
-.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
-.footer-logo-img{height:100px;width:auto;margin-bottom:18px;display:block}
-.footer-tagline{font-size:13px;color:rgba(240,239,237,0.3);line-height:1.65;max-width:260px}
-.footer-col-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(240,239,237,0.25);margin-bottom:18px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-links a{font-size:13px;color:rgba(240,239,237,0.45);text-decoration:none;transition:color 0.2s}
-.footer-links a:hover{color:var(--off-white)}
-.footer-bottom{padding-top:32px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;color:rgba(240,239,237,0.2)}
-@media(max-width:960px){nav{padding:14px 24px}.nav-logo img{height:64px}.nav-links{display:none}.nav-toggle{display:flex}section{padding:64px 24px}.hero-lp{padding:140px 24px 64px}.footer-top{grid-template-columns:1fr 1fr}.footer-logo-img{height:64px}.footer-bottom{flex-direction:column;gap:8px}}
+
+
+
+
+
+
+
+
+
+
+    .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+    .footer-logo-img{height:100px;width:auto;margin-bottom:18px;display:block}
+    .footer-tagline{font-size:13px;color:rgba(240,239,237,0.3);line-height:1.65;max-width:260px}
+    .footer-social{display:flex;gap:10px;flex-wrap:wrap}
+    .footer-social a{font-size:11px;color:rgba(240,239,237,0.4);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .footer-social a:hover{color:var(--off-white)}
+    .bcfb-logo{height:44px;width:auto;mix-blend-mode:screen;opacity:0.75;transition:opacity 0.2s;display:block;margin-top:16px}
+    .bcfb-logo:hover{opacity:1}
+    .footer-col-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(240,239,237,0.25);margin-bottom:18px}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-links a{font-size:13px;color:rgba(240,239,237,0.45);text-decoration:none;transition:color 0.2s}
+    .footer-links a:hover{color:var(--off-white)}
+    .footer-bottom{padding-top:32px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(240,239,237,0.2)}
+    footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(--mid)}
+    @media(max-width:960px){nav{padding:14px 24px}.nav-logo img{height:64px}.nav-links{display:none}.nav-toggle{display:flex}
+      [style*="grid-template-columns:1fr 1fr;gap:2px;margin-top:56px"]{grid-template-columns:1fr!important}section{padding:64px 24px}.hero-lp{padding:140px 24px 64px
+      .footer-top{grid-template-columns:1fr 1fr}
+      .footer-logo-img{height:64px}
+      .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+      .nav-toggle{cursor:pointer}
+    }
 </style>
 </head>
 <body>
@@ -130,27 +151,103 @@ footer{padding:64px 52px 48px;border-top:1px solid var(--border);background:var(
 </section>
 <footer>
   <div class="footer-top">
-    <div><img src="/logo.svg" alt="Overtime Marketing" class="footer-logo-img"/><div class="footer-tagline">Full campaign marketing partner for ambitious businesses across North America. Based in Vancouver, BC.</div></div>
-    <div><div class="footer-col-label">Campaigns</div><ul class="footer-links"><li><a href="/pages/launch-campaign-agency.html">Launch Campaign</a></li><li><a href="/pages/brand-awareness-campaign-agency.html">Brand Awareness</a></li><li><a href="/pages/growth-campaign-agency.html">Growth Campaign</a></li><li><a href="/pages/event-campaign-agency.html">Event Campaign</a></li><li><a href="/pages/rebrand-campaign-agency.html">Rebrand Campaign</a></li></ul></div>
-    <div><div class="footer-col-label">Services</div><ul class="footer-links"><li><a href="/pages/services.html#video-photo">Video &amp; Photo</a></li><li><a href="/pages/services.html#digital-marketing">Digital Marketing</a></li><li><a href="/pages/services.html#branding-design">Branding &amp; Design</a></li><li><a href="/pages/services.html#strategy">Strategy</a></li></ul></div>
-    <div><div class="footer-col-label">Company</div><ul class="footer-links"><li><a href="/pages/about.html">About OTM</a></li><li><a href="/#work">Our Work</a></li><li><a href="/pages/reviews.html">Reviews</a></li><li><a href="/pages/faqs.html">FAQs</a></li><li><a href="mailto:info@overtimemarketing.ca">info@overtimemarketing.ca</a></li></ul></div>
-    <div><div class="footer-col-label">From the Blog</div><ul class="footer-links"><li><a href="/pages/blog-why-marketing-isnt-working.html">Why Your Marketing Isn't Working</a></li><li><a href="/pages/blog-what-is-a-campaign.html">What Is a Marketing Campaign?</a></li><li><a href="/pages/blog-campaign-vs-tactics.html">Campaigns vs Tactics</a></li><li><a href="/pages/blog-marketing-budget-small-business.html">Marketing Budget Guide</a></li></ul></div>
+    <div>
+      <img src="/logo.svg" alt="Overtime Marketing" class="footer-logo-img"/>
+      <div class="footer-tagline">Full campaign marketing partner for ambitious businesses across North America. Based in Vancouver, BC.</div>
+      <div class="footer-social" style="margin-top:16px">
+        <a href="https://www.instagram.com/overtime.marketing/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/90551355/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@overtimemarketing.ca">Email</a>
+      </div>
+      <div style="margin-top:20px">
+        <a href="https://bcfb.ca" target="_blank" rel="noopener" aria-label="BC Food and Beverage Proud Member">
+          <img src="https://overtimemarketing.ca/wp-content/uploads/2024/09/bcfb-proud-member-white.png"
+               alt="BC Food and Beverage Proud Member" class="bcfb-logo"/>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Campaigns</div>
+      <ul class="footer-links">
+        <li><a href="/pages/launch-campaign-agency.html">Launch Campaign</a></li>
+        <li><a href="/pages/brand-awareness-campaign-agency.html">Brand Awareness</a></li>
+        <li><a href="/pages/growth-campaign-agency.html">Growth Campaign</a></li>
+        <li><a href="/pages/event-campaign-agency.html">Event Campaign</a></li>
+        <li><a href="/pages/rebrand-campaign-agency.html">Rebrand Campaign</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-label">Services</div>
+      <ul class="footer-links">
+        <li><a href="/pages/services.html#video-photo">Video &amp; Photo</a></li>
+        <li><a href="/pages/services.html#digital-marketing">Digital Marketing</a></li>
+        <li><a href="/pages/services.html#branding-design">Branding &amp; Design</a></li>
+        <li><a href="/pages/services.html#strategy">Strategy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-label">Company</div>
+      <ul class="footer-links">
+        <li><a href="/pages/about.html">About OTM</a></li>
+        <li><a href="/pages/services.html">Services</a></li>
+        <li><a href="/#work">Our Work</a></li>
+        <li><a href="/pages/reviews.html">Reviews</a></li>
+        <li><a href="/pages/faqs.html">FAQs</a></li>
+        <li><a href="mailto:info@overtimemarketing.ca">info@overtimemarketing.ca</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-label">From the Blog</div>
+      <ul class="footer-links">
+        <li><a href="/pages/blog-why-marketing-isnt-working.html">Why Your Marketing Isn&#39;t Working</a></li>
+        <li><a href="/pages/blog-what-is-a-campaign.html">What Is a Marketing Campaign?</a></li>
+        <li><a href="/pages/blog-how-to-launch-product-canada.html">How to Launch a Product</a></li>
+        <li><a href="/pages/blog-marketing-agency-vancouver-guide.html">Choosing a Marketing Agency</a></li>
+        <li><a href="/pages/blog-marketing-budget-small-business.html">Marketing Budget Guide</a></li>
+        <li><a href="/pages/blog-campaign-vs-tactics.html">Campaigns vs Tactics</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2026 Overtime Marketing Inc. All Rights Reserved.</span><span>Vancouver, BC &nbsp;&middot;&nbsp; Canada</span></div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Overtime Marketing Inc. All Rights Reserved.</span>
+    <span>Vancouver, BC &nbsp;&middot;&nbsp; Canada</span>
+  </div>
 </footer>
 <script>
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-(function tick(){rx+=(mx-rx)*0.13;ry+=(my-ry)*0.13;cursor.style.left=mx+'px';cursor.style.top=my+'px';ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick)})();
-const nav=document.getElementById('mainNav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
-const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*55);obs.unobserve(e.target)}});},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement,isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')})});
-const navToggle=document.getElementById('navToggle'),mobileNav=document.getElementById('mobileNav');
-if(navToggle&&mobileNav){navToggle.addEventListener('click',()=>{navToggle.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':''});}
-function closeMobileNav(){if(navToggle)navToggle.classList.remove('open');if(mobileNav)mobileNav.classList.remove('open');document.body.style.overflow='';}
+  // Cursor (null-safe)
+  var _cursor=document.getElementById('cursor'),_ring=document.getElementById('cursorRing');
+  if(_cursor&&_ring){
+    var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
+    (function tick(){rx+=(mx-rx)*0.13;ry+=(my-ry)*0.13;_cursor.style.left=mx+'px';_cursor.style.top=my+'px';_ring.style.left=rx+'px';_ring.style.top=ry+'px';requestAnimationFrame(tick)})();
+  }
+  // Nav scroll
+  var _nav=document.getElementById('mainNav');
+  if(_nav) window.addEventListener('scroll',function(){_nav.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+  // Scroll reveal
+  var _obs=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting){setTimeout(function(){e.target.classList.add('visible')},i*55);_obs.unobserve(e.target)}});},{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(function(el){_obs.observe(el)});
+  // Hamburger
+  var _toggle=document.getElementById('navToggle'),_mobileNav=document.getElementById('mobileNav');
+  if(_toggle&&_mobileNav){
+    _toggle.addEventListener('click',function(){
+      _toggle.classList.toggle('open');
+      _mobileNav.classList.toggle('open');
+      document.body.style.overflow=_mobileNav.classList.contains('open')?'hidden':'';
+    });
+  }
+  function closeMobileNav(){
+    if(_toggle)_toggle.classList.remove('open');
+    if(_mobileNav)_mobileNav.classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileNav()});
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){
+    var item=btn.parentElement,isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+    if(!isOpen)item.classList.add('open');
+  })});
 </script>
 
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
