@@ -13,11 +13,6 @@
       "permanent": true
     },
     {
-      "source": "/services",
-      "destination": "/#campaign-types",
-      "permanent": true
-    },
-    {
       "source": "/content-campaigns",
       "destination": "/pages/launch-campaign-agency.html",
       "permanent": true
@@ -25,6 +20,191 @@
     {
       "source": "/our-work",
       "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/get-started",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/start-a-project",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/quote",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/free-quote",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/consultation",
+      "destination": "/pages/go.html",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/projects",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/team",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/meet-the-team",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/who-we-are",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/video-production",
+      "destination": "/pages/services.html#video-photo",
+      "permanent": true
+    },
+    {
+      "source": "/photography",
+      "destination": "/pages/services.html#video-photo",
+      "permanent": true
+    },
+    {
+      "source": "/branding",
+      "destination": "/pages/services.html#branding-design",
+      "permanent": true
+    },
+    {
+      "source": "/social-media",
+      "destination": "/pages/services.html#digital-marketing",
+      "permanent": true
+    },
+    {
+      "source": "/digital-marketing",
+      "destination": "/pages/services.html#digital-marketing",
+      "permanent": true
+    },
+    {
+      "source": "/strategy",
+      "destination": "/pages/services.html#strategy",
+      "permanent": true
+    },
+    {
+      "source": "/seo",
+      "destination": "/pages/services.html#digital-marketing",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/blog-why-marketing-isnt-working",
+      "permanent": true
+    },
+    {
+      "source": "/press",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/blog-why-marketing-isnt-working",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/blog-why-marketing-isnt-working",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/blog-why-marketing-isnt-working",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/pages/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/blog-why-marketing-isnt-working",
+      "permanent": true
+    },
+    {
+      "source": "/services/:path*",
+      "destination": "/pages/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/:path*",
+      "destination": "/#work",
+      "permanent": true
+    },
+    {
+      "source": "/contact/:path*",
+      "destination": "/pages/go.html",
       "permanent": true
     }
   ],
