@@ -206,6 +206,11 @@
       "source": "/contact/:path*",
       "destination": "/pages/go.html",
       "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about",
+      "permanent": true
     }
   ],
   "rewrites": [
