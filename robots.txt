@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://overtimemarketing.ca/sitemap.xml
+
+Sitemap: https://www.overtimemarketing.ca/sitemap.xml

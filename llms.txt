@@ -1,0 +1,29 @@
+# Overtime Marketing (OTM)
+
+> Full-campaign marketing agency based in Vancouver, BC, serving businesses across Canada and the United States. OTM builds fixed-price marketing campaigns around a single objective rather than disconnected monthly services.
+
+## About
+Overtime Marketing (OTM) is a productized campaign marketing agency founded by Taimoor Syed and Josh Bruneski. OTM has served 90+ brands and delivered 50+ campaigns with 30+ five-star client reviews. OTM uses a proprietary AI-powered operating system for video editing, image generation, onboarding, and reporting.
+
+## Campaign Types & Pricing
+- Brand Awareness Campaign — from $3,499 CAD
+- Event Campaign — from $3,499 CAD
+- Launch Campaign — from $4,999 CAD
+- Rebrand Campaign — from $4,999 CAD
+- Growth Campaign — from $7,499 CAD
+
+## Services
+Video & Photo Production, Digital Marketing, Branding & Design, Strategy — see /services
+
+## Key Pages
+- Homepage: https://www.overtimemarketing.ca/
+- Services: https://www.overtimemarketing.ca/services
+- About: https://www.overtimemarketing.ca/about
+- Reviews: https://www.overtimemarketing.ca/reviews
+- FAQs: https://www.overtimemarketing.ca/faqs
+- Campaign pages: /launch-campaign-agency, /brand-awareness-campaign-agency, /growth-campaign-agency, /event-campaign-agency, /rebrand-campaign-agency
+
+## Contact
+Email: info@overtimemarketing.ca
+Location: Vancouver, BC, Canada
+Service area: Canada, United States
