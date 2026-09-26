@@ -3,6 +3,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "overtimemarketing.ca"
+        }
+      ],
+      "destination": "https://www.overtimemarketing.ca/:path*",
+      "permanent": true
+    },
+    {
       "source": "/go",
       "destination": "/pages/go",
       "permanent": false
